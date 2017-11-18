@@ -12,7 +12,7 @@ namespace DOTNET2_zad2
         public double Leg { get; set; }
 
         public double Leg2 { get; set; }
-
+        
        
 
         public Triangle(double Base, double Leg,double Leg2)
@@ -25,11 +25,14 @@ namespace DOTNET2_zad2
             }else Console.WriteLine("Nie można utworzyć trójkąta z tych boków.");
         }
 
-        public override void CalculateArea()
-        {
+        
+        
+
+        public override void CalculateArea() 
+        { 
             base.CalculateArea();
             double p = 0.5 * (Base + Leg2 + Leg);
-            Console.WriteLine(Math.Sqrt(p*(p-Base)*(p-Leg)*(p-Leg2)));
+            Console.WriteLine(Math.Sqrt(p*(p-Base)*(p-Leg)*(p-Leg2))); // wzór Herona
         }
 
         public override void CalculateCircuit()
